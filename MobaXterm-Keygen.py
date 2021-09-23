@@ -2,6 +2,7 @@
 '''
 Author: Double Sine
 License: GPLv3
+2021-09-23
 '''
 import os, sys, zipfile
 
@@ -98,26 +99,26 @@ def GenerateLicense(Type : LicenseType, Count : int, UserName : str, MajorVersio
 
 def help():
     print('Usage:')
-    print('    MobaXterm-Keygen.py <UserName> <Version>')
+    print('    MobaXterm-Keygen.py <UserName> <Version> <count>')
     print()
     print('    <UserName>:      The Name licensed to')
     print('    <Version>:       The Version of MobaXterm')
     print('                     Example:    10.9')
+    print('    <count>:         Nuber of licenced users')
     print()
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
+    print(sys.argv[1:])
+    if len(sys.argv) != 4:
         help()
         exit(0)
     else:
+        pocet = int(sys.argv[3])
+        name = sys.argv[1]
         MajorVersion, MinorVersion = sys.argv[2].split('.')[0:2]
         MajorVersion = int(MajorVersion)
         MinorVersion = int(MinorVersion)
-        GenerateLicense(LicenseType.Professional, 
-                        1,
-                        sys.argv[1], 
-                        MajorVersion, 
-                        MinorVersion)
+        GenerateLicense(LicenseType.Professional, pocet, name, MajorVersion, MinorVersion)
         print('[*] Success!')
         print('[*] File generated: %s' % os.path.join(os.getcwd(), 'Custom.mxtpro'))
         print('[*] Please move or copy the newly-generated file to MobaXterm\'s installation path.')
