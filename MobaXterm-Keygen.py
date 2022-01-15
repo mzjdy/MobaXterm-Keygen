@@ -3,6 +3,7 @@
 Author: Double Sine
 License: GPLv3
 2021-09-23
+Changes: MG: added 3.parameter = count of licenses
 '''
 import os, sys, zipfile
 
