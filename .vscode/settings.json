@@ -1,0 +1,9 @@
+{
+    "python.testing.pytestArgs":
+    [
+    Herr-Matthias 22.1 
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
