@@ -1,4 +1,7 @@
-#/usr/bin/env python3
+from socket import herror
+
+
+Herr-Matthias; 22.1
 '''
 Author: Double Sine
 License: GPLv3
